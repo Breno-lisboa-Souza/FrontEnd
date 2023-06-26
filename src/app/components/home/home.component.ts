@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -7,49 +9,93 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   nomeProduto: string = 'Curso Angular';
-  //template string 👇 strings definidas com crase permitem a interpolação, permitindo colocar variáveis dentro da string
-  //anuncio: string = `O ${this.nomeProduto} está em promoção!`;
   idProduto: number = 1;
-  precoProduto: number = 22.5;
+  precoProduto: number = 122.5;
   promocao: boolean = false;
-  foto: string = 'assets/img/crud.png';
-  dataValidade = '2021-12-31';
+  foto: string = 'assets/img/Angular.png';
+  dataValidade = '2023-07-28';
+
+  nomeProduto2: string = 'Curso JavaScript';
+  idProduto2: number = 2;
+  precoProduto2: number = 115.9;
+  promocao2: boolean = true;
+  foto2: string = 'assets/img/cursoJS.jpg_large';
+  dataValidade2 = '2023-07-14';
+
+  nomeProduto3: string = 'Curso Figma 2.0     ';
+  idProduto3: number = 3;
+  precoProduto3: number = 145.9;
+  promocao3: boolean = false;
+  foto3: string = 'assets/img/figma.jpg';
+  dataValidade3 = '2023-07-09';
+
+  nomeProduto4: string = 'Curso HTML + CSS';
+  idProduto4: number = 4;
+  precoProduto4: number = 199.9;
+  promocao4: boolean = false;
+  foto4: string = 'assets/img/htmlcss.jpg';
+  dataValidade4 = '2023-07-21';
+
+  nomeProduto5: string = 'Curso Flutter 2.0      ';
+  idProduto5: number = 5;
+  precoProduto5: number = 149.9;
+  promocao5: boolean = false;
+  foto5: string = 'assets/img/flutter.png';
+  dataValidade5 = '2023-08-11';
+
+  nomeProduto6: string = 'Curso React Native';
+  idProduto6: number = 6;
+  precoProduto6: number = 129.9;
+  promocao6: boolean = true;
+  foto6: string = 'assets/img/resctnative.png';
+  dataValidade6 = '2023-08-02';
 
   listaProdutos: any[] = [
     {
-      nome: 'Curso de Angular',
-      precoProduto: 50.50,
-      validade: '2022-12-31',
+      nome: 'Curso Angular',
+      precoProduto: 122.5,
+      validade: '2023-07-28',
       id: 1,
     },
     {
-      nome: 'Curso de React',
-      precoProduto: 55.60,
-      validade: '2022-12-31',
+      nome: 'Curso JavaScript',
+      precoProduto: 115.9,
+      validade: '2023-07-14',
       id: 2,
       promocao: true,
     },
     {
-      nome: 'Curso de Vue.js',
-      precoProduto: 57.90,
-      validade: '2022-12-31',
+      nome: 'Curso Figma 2.0',
+      precoProduto: 145.90,
+      validade: '2023-07-09',
       id: 3,
     },
     {
-      nome: 'Curso de .Net Core',
-      precoProduto: 60.30,
-      validade: '2022-12-31',
+      nome: 'Curso HTML + CSS',
+      precoProduto: 199.9,
+      validade: '2023-07-21',
       id: 4,
     },
     {
-      nome: 'Curso de ECMAScript',
-      precoProduto: 70,
-      validade: '2022-12-31',
+      nome: 'Curso Flutter 2.0',
+      precoProduto: 149.9,
+      validade: '2023-08-11',
       id: 5,
+    },
+    {
+      nome: 'Curso React Native',
+      precoProduto: '129.9',
+      validade: '2023-08-02',
+      id: 6,
+      promocao: true,
     },
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  abrirDetalhesProduto(id: number): void {
+    this.router.navigate(['/produtos/detalhar-produto', id]);
+  }
 }

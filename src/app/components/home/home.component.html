@@ -1,27 +1,77 @@
 <h1 class="text-center text-danger mt-2">Seja bem vindo!</h1>
 
-<!-- <h4 class="text-danger">{{ anuncio }}</h4> -->
-
 <div class="row">
-  <div class="col">
+  <div class="col" *ngFor="let produto of listaProdutos">
     <app-card-produto
-      [foto]="foto"
-      [nomeProduto]="nomeProduto"
-      [promocao]="promocao"
-      [idProduto]="idProduto"
-      [dataValidade]="dataValidade"
-      [precoProduto]="precoProduto"
+      [foto]="produto.foto"
+      [nomeProduto]="produto.nome"
+      [promocao]="produto.promocao"
+      [idProduto]="produto.id"
+      [dataValidade]="produto.validade"
+      [precoProduto]="produto.precoProduto"
+      (detalharProduto)="abrirDetalhesProduto(produto.id)"
     >
     </app-card-produto>
   </div>
-  <div class="col">
+
+
+  <div class="col" *ngFor="let produto of listaProdutos">
     <app-card-produto
-      foto="http://www.receitadeviagem.com.br/wp-content/uploads/2019/05/Viagem-para-Budapeste-87-Receita-de-Viagem-1024x680.jpg"
-      nomeProduto="Viagem a budapest"
-      [promocao]="false"
-      [idProduto]="15"
-      dataValidade="2021-12-31"
-      [precoProduto]="5434.00"
+      [foto]="foto2"
+      [nomeProduto]="nomeProduto2"
+      [promocao]="promocao2"
+      [idProduto]="idProduto2"
+      [dataValidade]="dataValidade2"
+      [precoProduto]="precoProduto2"
+      (detalharProduto)="abrirDetalhesProduto(produto.id)"
+    >
+    </app-card-produto>
+  </div>
+  <div class="col" *ngFor="let produto of listaProdutos">
+    <app-card-produto
+      [foto]="foto3"
+      [nomeProduto]="nomeProduto3"
+      [promocao]="promocao3"
+      [idProduto]="idProduto3"
+      [dataValidade]="dataValidade3"
+      [precoProduto]="precoProduto3"
+      (detalharProduto)="abrirDetalhesProduto(produto.id)"
+    >
+    </app-card-produto>
+  </div>
+  <div class="col" *ngFor="let produto of listaProdutos">
+    <app-card-produto
+      [foto]="foto4"
+      [nomeProduto]="nomeProduto4"
+      [promocao]="promocao4"
+      [idProduto]="idProduto4"
+      [dataValidade]="dataValidade4"
+      [precoProduto]="precoProduto4"
+      (detalharProduto)="abrirDetalhesProduto(produto.id)"
+    >
+    </app-card-produto>
+  </div>
+  <div class="col" *ngFor="let produto of listaProdutos">
+    <app-card-produto
+      [foto]="foto5"
+      [nomeProduto]="nomeProduto5"
+      [promocao]="promocao5"
+      [idProduto]="idProduto5"
+      [dataValidade]="dataValidade5"
+      [precoProduto]="precoProduto5"
+      (detalharProduto)="abrirDetalhesProduto(produto.id)"
+    >
+    </app-card-produto>
+  </div>
+  <div class="col" *ngFor="let produto of listaProdutos">
+    <app-card-produto
+      [foto]="foto6"
+      [nomeProduto]="nomeProduto6"
+      [promocao]="promocao6"
+      [idProduto]="idProduto6"
+      [dataValidade]="dataValidade6"
+      [precoProduto]="precoProduto6"
+      (detalharProduto)="abrirDetalhesProduto(produto.id)"
     >
     </app-card-produto>
   </div>

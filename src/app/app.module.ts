@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AtualizarProdutoComponent } from './components/produtos/atualizar-produto/atualizar-produto.component';
+import { DetalharProdutoComponent } from './components/produtos/detalhar-produto/detalhar-produto.component';
 
 registerLocaleData(localePt);
 
@@ -29,6 +30,7 @@ registerLocaleData(localePt);
     ListarProdutosComponent,
     CadastrarProdutoComponent,
     AtualizarProdutoComponent,
+    DetalharProdutoComponent,
   ],
   imports: [
     BrowserModule,
