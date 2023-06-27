@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -91,11 +91,11 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor(private router: Router) {}
+  constructor() {}
+
 
   ngOnInit(): void {}
 
-  abrirDetalhesProduto(id: number): void {
-    this.router.navigate(['/produtos/detalhar-produto', id]);
-  }
+
+
 }

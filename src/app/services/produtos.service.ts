@@ -5,6 +5,7 @@ import { EMPTY, Observable } from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
 import { ToastrService } from 'ngx-toastr';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -49,4 +50,6 @@ export class ProdutosService {
   exibirMensagem(titulo:string, mensagem: string, tipo: string):void{
     this.toastr.show(mensagem, titulo,{closeButton:true, progressBar:true}, tipo);
   }
+
+
 }

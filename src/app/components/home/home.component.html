@@ -1,21 +1,21 @@
 <h1 class="text-center text-danger mt-2">Seja bem vindo!</h1>
 
 <div class="row">
-  <div class="col" *ngFor="let produto of listaProdutos">
+  <div class="col">
     <app-card-produto
-      [foto]="produto.foto"
-      [nomeProduto]="produto.nome"
-      [promocao]="produto.promocao"
-      [idProduto]="produto.id"
-      [dataValidade]="produto.validade"
-      [precoProduto]="produto.precoProduto"
-      (detalharProduto)="abrirDetalhesProduto(produto.id)"
+    [foto]="foto"
+    [nomeProduto]="nomeProduto"
+    [promocao]="promocao"
+    [idProduto]="idProduto"
+    [dataValidade]="dataValidade"
+    [precoProduto]="precoProduto"
+
     >
     </app-card-produto>
   </div>
 
 
-  <div class="col" *ngFor="let produto of listaProdutos">
+  <div class="col">
     <app-card-produto
       [foto]="foto2"
       [nomeProduto]="nomeProduto2"
@@ -23,11 +23,10 @@
       [idProduto]="idProduto2"
       [dataValidade]="dataValidade2"
       [precoProduto]="precoProduto2"
-      (detalharProduto)="abrirDetalhesProduto(produto.id)"
     >
     </app-card-produto>
   </div>
-  <div class="col" *ngFor="let produto of listaProdutos">
+  <div class="col">
     <app-card-produto
       [foto]="foto3"
       [nomeProduto]="nomeProduto3"
@@ -35,11 +34,10 @@
       [idProduto]="idProduto3"
       [dataValidade]="dataValidade3"
       [precoProduto]="precoProduto3"
-      (detalharProduto)="abrirDetalhesProduto(produto.id)"
     >
     </app-card-produto>
   </div>
-  <div class="col" *ngFor="let produto of listaProdutos">
+  <div class="col">
     <app-card-produto
       [foto]="foto4"
       [nomeProduto]="nomeProduto4"
@@ -47,11 +45,10 @@
       [idProduto]="idProduto4"
       [dataValidade]="dataValidade4"
       [precoProduto]="precoProduto4"
-      (detalharProduto)="abrirDetalhesProduto(produto.id)"
     >
     </app-card-produto>
   </div>
-  <div class="col" *ngFor="let produto of listaProdutos">
+  <div class="col">
     <app-card-produto
       [foto]="foto5"
       [nomeProduto]="nomeProduto5"
@@ -59,11 +56,10 @@
       [idProduto]="idProduto5"
       [dataValidade]="dataValidade5"
       [precoProduto]="precoProduto5"
-      (detalharProduto)="abrirDetalhesProduto(produto.id)"
     >
     </app-card-produto>
   </div>
-  <div class="col" *ngFor="let produto of listaProdutos">
+  <div class="col">
     <app-card-produto
       [foto]="foto6"
       [nomeProduto]="nomeProduto6"
@@ -71,7 +67,6 @@
       [idProduto]="idProduto6"
       [dataValidade]="dataValidade6"
       [precoProduto]="precoProduto6"
-      (detalharProduto)="abrirDetalhesProduto(produto.id)"
     >
     </app-card-produto>
   </div>
